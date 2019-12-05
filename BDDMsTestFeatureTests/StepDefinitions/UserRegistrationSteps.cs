@@ -12,11 +12,11 @@ namespace BDDMsTestFeatureTests.StepDefinitions
     {
         private RegistrationPage _registrationPage;
         private LoginPage _loginPage;
-        private readonly UserRegistration userRegistration;
+        private readonly UserInformation userRegistration;
         private readonly UserDto userDto;
 
 
-        public UserRegistrationSteps(UserRegistration userRegistration)
+        public UserRegistrationSteps(UserInformation userRegistration)
         {
             
             this.userRegistration = userRegistration;
@@ -80,7 +80,7 @@ namespace BDDMsTestFeatureTests.StepDefinitions
         public void WhenUserLoginWith(Table table)
         {
             _loginPage = new LoginPage(_driver);
-            var userdetails = table.CreateInstance<UserLogin>();
+            var userdetails = table.CreateInstance<UserInformation>();
             userdetails.uname = userDto.Uname;
             userdetails.password = userDto.PassWord;
             _loginPage.LoginIntoParaBank(userdetails.uname,userdetails.password);

@@ -21,7 +21,7 @@ namespace BDDMsTestFeatureTests.Hooks
             var registrationPage = new RegistrationPage(_driver);
             registrationPage.NavigateToRegistrationPage();
             var userInfo = new UserDto();
-            var usercredentials = new UserLogin();
+            var usercredentials = new UserInformation();
             registrationPage.EnterUserInformation(userInfo.FirstName, userInfo.LastName, userInfo.Street,userInfo.City, userInfo.State, userInfo.Zip, userInfo.Phone, userInfo.SSN, userInfo.Uname, userInfo.PassWord, userInfo.PassWord);
             registrationPage.SubmitRegistration();
             registrationPage.ConfirmRegistration(userInfo.Uname);

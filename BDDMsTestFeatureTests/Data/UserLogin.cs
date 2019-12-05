@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BDDMsTestFeatureTests.Data
 {
-    public class UserLogin
-    {
-        public string uname { get; set; }
-        public string password { get; set; }
-    }
+    //public class UserLogin
+    //{
+    //    public string uname { get; set; }
+    //    public string password { get; set; }
+    //}
 }

@@ -191,6 +191,7 @@
     <Compile Include="BaseConfig\TestBase.cs" />
     <Compile Include="Data\CityInformation.cs" />
     <Compile Include="Data\UserDto.cs" />
+    <Compile Include="Data\UserInformation.cs" />
     <Compile Include="Data\UserLogin.cs" />
     <Compile Include="Data\UserRegistration.cs" />
     <Compile Include="ExtensionMethods\ScenarioExtensionMethods.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Pages\RegistrationPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\GetCityInformationSteps.cs" />
+    <Compile Include="StepDefinitions\GetUserInformationSteps.cs" />
     <Compile Include="StepDefinitions\UserRegistrationSteps.cs" />
   </ItemGroup>
   <ItemGroup>

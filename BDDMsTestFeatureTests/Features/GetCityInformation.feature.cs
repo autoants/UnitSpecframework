@@ -76,13 +76,13 @@ namespace BDDMsTestFeatureTests.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("GetCityInformation")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("API")]
         public virtual void GetCityInformation()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "API"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GetCityInformation", null, new string[] {
-                        "mytag"});
+                        "API"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -108,7 +108,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "http://api.zippopotam.us/us/"});
 #line 8
- testRunner.Given("I have the base url", ((string)(null)), table1, "Given ");
+ testRunner.Given("I have the base api for us cities", ((string)(null)), table1, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "zipcode"});

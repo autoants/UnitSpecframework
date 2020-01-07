@@ -22,13 +22,15 @@ namespace BDDMsTestFeatureTests.StepDefinitions
         [When(@"I Request or all users in a page")]
         public void WhenIRequestOrAllUsersInAPage(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var userdetails = table.CreateInstance<UserInformation>();
+            restResponse = RESTOperations.GetListOfUsers(userdetails.page);
         }
         
         [Then(@"I get user list in the given page")]
         public void ThenIGetUserListInTheGivenPage(Table table)
         {
-            ScenarioContext.Current.Pending();
+            var userdetails = table.CreateInstance<UserInformation>();
+            RESTOperations.AssertResponseContainsExpectedResult(restResponse, userdetails.page);
         }
     }
 }

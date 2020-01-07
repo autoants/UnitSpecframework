@@ -31,5 +31,11 @@ namespace BDDMsTestFeatureTests.API
             }
         }
         
+        public static IRestResponse GetListOfUsers(string endpoint)
+        {
+            restRequest = new RestRequest(endpoint, Method.GET);
+            IRestResponse response = restClient.Execute(restRequest);
+            return response;
+        }
     }
 }

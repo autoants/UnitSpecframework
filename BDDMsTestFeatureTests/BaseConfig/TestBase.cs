@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading;
@@ -23,7 +24,6 @@ namespace BDDMsTestFeatureTests.BaseConfig
         private string startupPath = Directory.GetCurrentDirectory();
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
         protected static IWebDriver _driver { get; set; }
-        protected static AccountOverViewPage accountServicePage { get; set; }
 
         //Instance of extents reports
 
@@ -43,10 +43,12 @@ namespace BDDMsTestFeatureTests.BaseConfig
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
             PathReport = $"{Environment.CurrentDirectory}ExtentReport.html";
 
-            _driver = new ChromeDriver();
-            _driver.Manage().Window.Maximize();
-            _driver.Navigate().GoToUrl("https://parabank.parasoft.com");
-            accountServicePage = new AccountOverViewPage(_driver);
+
+            //_driver = new ChromeDriver();
+            //_driver.Manage().Window.Maximize();
+            //_driver.Navigate().GoToUrl("https://parabank.parasoft.com");
+            //accountServicePage = new AccountOverViewPage(_driver);
+
 
             var reporter = new ExtentHtmlReporter(PathReport);
             _extent = new ExtentReports();
@@ -59,9 +61,11 @@ namespace BDDMsTestFeatureTests.BaseConfig
         {
             _feature = _extent.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
         }
+        
         [BeforeScenario]
+       
         public static void CreateScenario()
-        {
+        {           
             _scenario = _feature.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
         [AfterStep]

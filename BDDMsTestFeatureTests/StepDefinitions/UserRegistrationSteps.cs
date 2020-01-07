@@ -11,15 +11,16 @@ namespace BDDMsTestFeatureTests.StepDefinitions
     public class UserRegistrationSteps : TestBase
     {
         private RegistrationPage _registrationPage;
+        private AccountOverViewPage accountServicePage;
         private LoginPage _loginPage;
-        private readonly UserInformation userRegistration;
+        private readonly UserInformation userInformation;
         private readonly UserDto userDto;
 
 
-        public UserRegistrationSteps(UserInformation userRegistration)
+        public UserRegistrationSteps(UserInformation userInformation)
         {
             
-            this.userRegistration = userRegistration;
+            this.userInformation = userInformation;
             userDto = new UserDto();
             
         }
@@ -47,9 +48,9 @@ namespace BDDMsTestFeatureTests.StepDefinitions
             password = userDto.PassWord;
             rpassword = userDto.PassWord;
 
-            userRegistration.firstname = firstname;
-            userRegistration.lastname = lastname;
-            userRegistration.uname = uname;
+            userInformation.firstname = firstname;
+            userInformation.lastname = lastname;
+            userInformation.uname = uname;
 
             _registrationPage.EnterUserInformation(firstname, lastname, street, city, state, zipcode, phone, ssn, uname, password, rpassword); 
         }
@@ -65,13 +66,14 @@ namespace BDDMsTestFeatureTests.StepDefinitions
         [Then(@"The welcome message displays to the user with (.*)")]
         public void ThenTheWelcomeMessageDisplaysToTheUserWith(string userid)
         {
-            _registrationPage.ConfirmRegistration(userRegistration.uname);
+            _registrationPage.ConfirmRegistration(userInformation.uname);
         }
 
         
         [Then(@"User LogOut from the Application")]
         public void ThenUserLogOutFromTheApplication()
         {
+            accountServicePage = new AccountOverViewPage(_driver);
             accountServicePage.LogOut();
         }
 

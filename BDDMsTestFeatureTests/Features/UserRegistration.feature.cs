@@ -21,14 +21,12 @@ namespace BDDMsTestFeatureTests.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("UserRegistration")]
-    [NUnit.Framework.CategoryAttribute("chrome")]
     public partial class UserRegistrationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = new string[] {
-                "chrome"};
+        private string[] _featureTags = ((string[])(null));
         
 #line 1 "UserRegistration.feature"
 #line hidden
@@ -37,8 +35,7 @@ namespace BDDMsTestFeatureTests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UserRegistration", "\tIn order to access parabank site\r\n\tAs a user\r\n\tI want to register", ProgrammingLanguage.CSharp, new string[] {
-                        "chrome"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "UserRegistration", "\tIn order to access parabank site\r\n\tAs a user\r\n\tI want to register", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -92,7 +89,7 @@ namespace BDDMsTestFeatureTests.Features
             }
             string[] tagsOfScenario = @__tags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Registration", null, @__tags);
-#line 8
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -112,19 +109,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
+#line 9
  testRunner.Given("User clicks on Registration link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
+#line 10
  testRunner.And(string.Format("User Enter {0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", firstname, lastname, street, city, state, zipcode, phone, ssn, uname, password, rpassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 11
  testRunner.When("User submit registration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 12
  testRunner.Then(string.Format("The welcome message displays to the user with {0}", uname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 14
+#line 13
  testRunner.And("User LogOut from the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -140,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Login"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login", null, new string[] {
                         "Login"});
-#line 21
+#line 20
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -160,19 +157,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "userid",
                             "password"});
-                table4.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "<userid>",
                             "<password>"});
-#line 23
-  testRunner.When("User login with", ((string)(null)), table4, "When ");
+#line 22
+  testRunner.When("User login with", ((string)(null)), table7, "When ");
 #line hidden
-#line 27
+#line 26
   testRunner.Then("Accounts OverView Page displays to the user.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 28
+#line 27
   testRunner.And("User LogOut from the Application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

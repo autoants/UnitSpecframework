@@ -3,9 +3,9 @@
 	As a tourist
 	I want to get the information of a city
 
-@GetMethodByResource
+@API
 Scenario: GetCityInformation
-	Given I have the base url
+	Given I have the base api for us cities
 	| url                         |
 	| http://api.zippopotam.us/us/ |
 	When I request the city information using zipcode
@@ -14,14 +14,4 @@ Scenario: GetCityInformation
 	Then the server returns the response with the city information
 	| city |
 	| Cary |
-@GetMethodByQueryString
-Scenario:  GetListOfUsers
-Given I have the base url
-         | url |
-         | https://reqres.in/api/   |
-When I Request or all users in a page
-| user | page |
-|  users    |   2   |
-Then I get user list in the given page
-| page |
-| 2    |
+

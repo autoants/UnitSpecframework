@@ -9,9 +9,11 @@ namespace BDDMsTestFeatureTests.Data
     public class UserInformation
     {
         public string page { get; set; }
-        public string firtname { get; set; }
+        public string firstname { get; set; }
         public string lastname { get; set; }
         public string uname { get; set; }
         public string password { get; set; }
+        public string url { get; set; }
+        
     }
 }

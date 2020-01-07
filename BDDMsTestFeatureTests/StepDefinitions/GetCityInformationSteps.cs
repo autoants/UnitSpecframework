@@ -13,25 +13,25 @@ namespace BDDMsTestFeatureTests.StepDefinitions
         private RestClient restClient;
         private IRestResponse restResponse;
 
-        [Given(@"I have the base url")]
-        public void GivenIHaveTheBaseUrl(Table table)
+        [Given(@"I have the base api for us cities")]
+        public void GivenIHaveTheBaseApiForUsCities(Table table)
         {
-            var userdetails = table.CreateInstance<CityInformation>();
-            restClient = RESTOperations.SetRestClient(userdetails.url);
+            var cityinfo = table.CreateInstance<CityInformation>();
+            restClient = RESTOperations.SetRestClient(cityinfo.url);
         }
 
         [When(@"I request the city information using zipcode")]
         public void WhenIRequestTheCityInformationUsingZipcode(Table table)
         {
-            var userdetails = table.CreateInstance<CityInformation>();
-            restResponse = RESTOperations.GetResourceInformation(userdetails.zipcode);
+            var cityinfo = table.CreateInstance<CityInformation>();
+            restResponse = RESTOperations.GetResourceInformation(cityinfo.zipcode);
         }
 
         [Then(@"the server returns the response with the city information")]
         public void ThenTheServerReturnsTheResponseWithTheCityInformation(Table table)
         {
-            var userdetails = table.CreateInstance<CityInformation>();
-            RESTOperations.AssertResponseContainsExpectedResult(restResponse, userdetails.city);
+            var cityinfo = table.CreateInstance<CityInformation>();
+            RESTOperations.AssertResponseContainsExpectedResult(restResponse, cityinfo.city);
         }
         
     }

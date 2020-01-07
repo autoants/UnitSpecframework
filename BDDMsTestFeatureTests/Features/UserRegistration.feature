@@ -1,5 +1,4 @@
-﻿@chrome
-Feature: UserRegistration
+﻿Feature: UserRegistration
 	In order to access parabank site
 	As a user
 	I want to register
